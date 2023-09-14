@@ -4,6 +4,19 @@ import { View, Text, StyleSheet, Image, Linking, TouchableOpacity } from "react-
 import CustomTextInput from "../component/CustomTextInput";
 import CustomButton from '../component/CustomButton';
 
+const BackgroundImage = ({ source, opacity, children }) => {
+  return (
+    <View style={{ flex: 1 }}>
+      <Image
+        source={source}
+        style={[StyleSheet.absoluteFill, { opacity, width: '100%', height: '100%' }]}
+        resizeMode="cover"
+      />
+      {children}
+    </View>
+  );
+};
+
 const LocationEvent = ({ navigation }) => {
   const [location, setLocation] = useState("");
 
@@ -19,12 +32,9 @@ const LocationEvent = ({ navigation }) => {
 
   return (
     <Background>
+    <BackgroundImage source={require("../assets/Location.png")} opacity={0.3}>
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <Image
-            source={require("../assets/rafiki.png")} // Update with your image path
-            style={styles.logo}
-          />
         </View>
         <Text style={styles.text}>Where is the location ?</Text>
         <CustomTextInput
@@ -35,13 +45,16 @@ const LocationEvent = ({ navigation }) => {
         <TouchableOpacity style={styles.googleMapsLink} onPress={handleSearchGoogleMaps}>
           <Text style={styles.linkText}>Search on Google Maps</Text>
         </TouchableOpacity>
-      <CustomButton
-      title={"next"}
-      onPress={() => navigation.navigate("Budget")}/>
+        <CustomButton
+          title={"Next"}
+          onPress={() => navigation.navigate("Budget")}
+        />
       </View>
+    </BackgroundImage>
     </Background>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -49,60 +62,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logoContainer: {
-     alignItems: "center",
-     justifyContent: "center",
-  },
-  logo: {
-    width: 370,
-    height: 290,
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     color: "white",
     fontSize: 30,
-    marginVertical: 20,
-  },
-  inputSpacer: {
-    height: 10, // Adjust the height as needed
-  },
-  lineContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10,
-    marginBottom: 15,
-  },
-  line: {
-    flex: 1,
-    height: 1,
-    backgroundColor: "white",
-  },
-  textBlack: {
-    color: "white",
-    fontSize: 30,
-    marginVertical: 20,
-  },
-  iconRow: {
-    flexDirection: "row",
-    marginBottom: 30,
-  },
-  icon: {
-    marginHorizontal: 10,
+    marginVertical: 30,
+    fontFamily: "Roboto",
   },
   googleMapsLink: {
-    marginTop: 20,
+    width: 260,
+    height: 45,
+    marginTop: 10,
     padding: 10,
-    backgroundColor: "#DB4437",
-    borderRadius: 5,
+    backgroundColor: "rgba(119, 31, 152, 0.6)",
+    borderRadius: 1,
   },
   linkText: {
     color: "white",
     fontSize: 18,
     textAlign: "center",
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+
   },
 });
 

@@ -58,27 +58,23 @@ const SignUpScreen = ({ navigation }) => {
             size={30}
             color="#DB4437"
             style={styles.icon}
-            onPress={() => navigation.navigate("Gender")}
+            onPress={() => navigation.navigate("LogIn")}
           />
           <Icon
             name="apple"
             size={30}
             color="black"
             style={styles.icon}
-            onPress={() => navigation.navigate("Gender")}
+            onPress={() => navigation.navigate("LogIn")}
           />
           <Icon
             name="facebook"
             size={30}
             color="blue"
             style={styles.icon}
-            onPress={() => navigation.navigate("Gender")}
+            onPress={() => navigation.navigate("LogIn")}
           />
         </View>
-        onDone={() => navigation.navigate("LogIn")}
-        <TouchableOpacity onPress={onDone}>
-        <Text style={styles.buttonText}>Next</Text>
-       </TouchableOpacity>
       </View>
     </Background>
   );
@@ -92,17 +88,6 @@ const styles = StyleSheet.create({
   logoContainer: {
     alignItems: "center",
     justifyContent: "center",
-  },
-  buttonContainer: {
-    backgroundColor: '#3498db',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 20,
-    marginBottom: 40,
-  },
-  buttonText: {
-    fontSize: 18,
-    color: 'white',
   },
   logo: {
     width: 370,

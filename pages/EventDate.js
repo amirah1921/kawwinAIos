@@ -74,15 +74,15 @@ const EventDate = () => {
           scaleFactor={375}
           textStyle={{
             fontSize: 20,
-            fontFamily: 'Arial',
+            fontFamily: 'Roboto',
             color: 'black',
           }}
           onDateChange={onDateChange}
         />
       </View>
       <CustomButton
-      title={"next"}
-      onPress={() => navigation.navigate("EventTime")}/>
+      title={"Next"}
+      onPress={() => navigation.navigate("SpendingBudget")}/>
     </SafeAreaView>
     </Background>
   );
@@ -91,7 +91,7 @@ const EventDate = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 30,
+    paddingBottom: 70,
     padding: 16,
   },
   titleStyle: {

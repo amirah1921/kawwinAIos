@@ -22,9 +22,9 @@ const LogInScreen = ({ navigation }) => {
       <View style={styles.container}>
         <View style={styles.logoContainer}>
           <Text style={styles.text}>
-          Hello, Welcome Back{"\n"}
+          Hello,{"\n"}Welcome Back{"\n"}
           <Text style={styles.subtitleText}>Happy to see you again,
-                to use your{"\n"}account pleace login first.</Text>
+                to use your{"\n"}account please login first.</Text>
           </Text>
           <Image
           source={require("../assets/sitting.png")} 
@@ -46,10 +46,10 @@ const LogInScreen = ({ navigation }) => {
         />
         <CustomButton
           title={"Login"}
-          height={42}
-          width={140}
-          backgroundColor={"rgba(119, 31, 152, 0.6)"}
-          onPress={() => navigation.navigate("Location")}
+          height={45}
+          width={260}
+          backgroundColor="rgba(255, 255, 255, 0.7)" // 80% opacity
+          onPress={() => navigation.navigate("Status")}
         />
         <View style={styles.lineContainer}>
           <View style={styles.line} />
@@ -62,21 +62,21 @@ const LogInScreen = ({ navigation }) => {
             size={30}
             color="#DB4437"
             style={styles.icon}
-            onPress={() => navigation.navigate("Location")}
+            onPress={() => navigation.navigate("Status")}
           />
           <Icon
             name="apple"
             size={30}
             color="black"
             style={styles.icon}
-            onPress={() => navigation.navigate("Location")}
+            onPress={() => navigation.navigate("Status")}
           />
           <Icon
             name="facebook"
             size={30}
             color="blue"
             style={styles.icon}
-            onPress={() => navigation.navigate("Location")}
+            onPress={() => navigation.navigate("Status")}
           />
         </View>
       </View>
@@ -88,30 +88,30 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    padding: 10
+    padding: 10,
   },
   logoContainer: {
-   
     flexDirection: "row",
      alignItems: "center",
      justifyContent: "center",
   },
   logo: {
-    width: 140,
+    width: 150,
     height: 239,
   },
   text: {
     color: "white",
-    fontSize: 24,
+    fontSize: 36,
     marginVertical: 20,
+    fontFamily: 'Roboto',
   },
   subtitleText: {
     color: "white",
-    fontSize: 14,
+    fontSize: 15,
     marginBottom: 10,
   },
   inputSpacer: {
-    height: 10, // Adjust the height as needed
+    height: 5, // Adjust the height as needed
   },
   lineContainer: {
     flexDirection: "row",

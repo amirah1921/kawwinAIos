@@ -79,7 +79,7 @@ const Introduction = () => {
           </LinearGradient>
         )}
         renderNextButton={RenderNextButton}
-        onDone={() => navigation.navigate("LogIn")}
+        onDone={() => navigation.navigate("SignUp")}
       />
       
     );

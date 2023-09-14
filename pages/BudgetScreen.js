@@ -17,8 +17,9 @@ const BudgetScreen = ({ navigation }) => {
       <View style={styles.container}>
         <View style={styles.logoContainer}>
           <Image
-            source={require("../assets/rafiki.png")}
+            source={require('../assets/robotAI.png')} // Update with your image path
             style={styles.logo}
+            resizeMode="contain"
           />
         </View>
         <Text style={styles.text}>What's your estimated budget?</Text>
@@ -37,7 +38,7 @@ const BudgetScreen = ({ navigation }) => {
           onChangeText={handleBudgetChange}
         />
         <CustomButton
-      title={"next"}
+      title={"Next"}
       onPress={() => navigation.navigate("EventDate")}/>
       </View>
     </Background>
@@ -62,38 +63,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 30,
     marginVertical: 20,
-  },
-  inputSpacer: {
-    height: 10, // Adjust the height as needed
-  },
-  lineContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10,
-    marginBottom: 15,
-  },
-  line: {
-    flex: 1,
-    height: 1,
-    backgroundColor: "white",
-  },
-  textBlack: {
-    color: "white",
-    fontSize: 15,
-    marginVertical: 20,
-  },
-  iconRow: {
-    flexDirection: "row",
-    marginBottom: 30,
-  },
-  icon: {
-    marginHorizontal: 10,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
   },
 });
 

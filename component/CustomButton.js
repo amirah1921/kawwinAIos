@@ -15,7 +15,7 @@ const CustomButton = ({ title, onPress, width, height, backgroundColor }) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    borderRadius: 26,
+    borderRadius: 1,
     borderColor: "#00000",
     borderWidth: 1, // Border width
     marginTop: 10, // Add spacing between text and buttons
